@@ -13,10 +13,6 @@ varying float topp;
 varying float endPct;
 
 
-
-
-
-
 void main() {
    
   vec2 aspectVec = vec2(aspect, 1.0);

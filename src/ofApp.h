@@ -41,11 +41,12 @@
     
     
         //--------------------------- android specific stuff
-        void touchDown(int x, int y, int id);
-        void touchMoved(int x, int y, int id);
-        void touchUp(int x, int y, int id);
-        void touchDoubleTap(int x, int y, int id);
-        //void touchCancelled(int x, int y, int id);
+		void touchDown(int x, int y, int id);
+		void touchMoved(int x, int y, int id);
+		void touchUp(int x, int y, int id);
+		void touchDoubleTap(int x, int y, int id);
+		void touchCancelled(int x, int y, int id);
+		void swipe(ofxAndroidSwipeDir swipeDir, int id);
            
         void pause();
         void stop();

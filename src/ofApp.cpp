@@ -435,7 +435,7 @@ void ofApp::draw(){
     //shader.setUniform1f("thickness", 30);
     shader->setUniform1f("aspect", screenWidth/(float)screenHeight);
     shader->setUniformMatrix4f("projection",(cam.getProjectionMatrix()));
-    shader->setUniformMatrix4f("modelview", cam.getModelViewMatrix() * toGlm(worldFlipMatrix));
+    shader->setUniformMatrix4f("modelview", toGlm(toOf(cam.getModelViewMatrix()) * worldFlipMatrix));
     shader->setUniformTexture("ink", ink, 0);
     shader->setUniform1f("focusPoint", -1400);
     shader->setUniform1f("drawTrans", 0.0); //(int) ofGetElapsedTimef() % 6 > 3 ? 0.0 : 1.0);
@@ -844,8 +844,7 @@ void ofApp::touchMoved(int x, int y, int id){
     
     
 	
-    
-    
+
 	if (id == 0){
         
         if (bIsThisMouseEventInMenu == false){
@@ -966,7 +965,12 @@ void ofApp::touchDoubleTap(int x, int y, int id){
 	
 }
 
+void ofApp::touchCancelled(int x, int y, int id){
 
+}
+void ofApp::swipe(ofxAndroidSwipeDir swipeDir, int id){
+
+}
 
 //--------------------------------------------------------------
 void ofApp::pause(){
