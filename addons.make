@@ -1,0 +1,3 @@
+ofxGifEncoder
+ofxGui
+ofxXmlSettings
